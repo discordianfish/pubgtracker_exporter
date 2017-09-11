@@ -4,6 +4,7 @@ import (
 	"flag"
 	"log"
 	"net/http"
+	"strconv"
 	"strings"
 	"time"
 
@@ -140,10 +141,15 @@ func (c *statsCollector) Collect(ch chan<- prometheus.Metric) {
 				stats.Label,
 				[]string{"region", "match", "season"}, nil,
 			)
+			val, err := strconv.ParseFloat(stats.Value, 64)
+			if err != nil {
+				log.Println("Couldn't parse value %s as float: %s", stats.Value, err)
+				continue
+			}
 			ch <- prometheus.MustNewConstMetric(
 				desc,
 				prometheus.UntypedValue,
-				stats.ValueDec,
+				val,
 				region.Region,
 				region.Match,
 				region.Season)

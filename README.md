@@ -35,10 +35,10 @@ The examples use this scrape config for nicer labels and configuration:
 
 Where under targets we list the players we're interested in.
 
-**"kill rate"**:
+### "kill rate"
 ![Kill rate](img/kill_rate.png)
 
-**Calculate average kills per minute across all seasons**:
+### Calculate average kills per minute across all seasons
 ```
 avg by (instance) ((pubgtracker_stats_kills/pubgtracker_stats_time_survived) * 60)
 
@@ -49,7 +49,7 @@ avg by (instance) ((pubgtracker_stats_kills/pubgtracker_stats_time_survived) * 6
 {instance="discordianfish"} 0.0662140377518949
 ```
 
-**Average kills per day played**:
+### Average kills per day played
 ```
 avg by (instance) ((pubgtracker_stats_kills/pubgtracker_stats_days))
 

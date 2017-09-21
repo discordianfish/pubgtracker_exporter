@@ -1,4 +1,6 @@
 # Pubgtracker Exporter
+[![Dashboard](grafana/pubg-player-850.png)](grafana/pubg-player.png)
+
 [Prometheus](https://prometheus.io) Exporter exposing
 [pubtracker](https://pubgtracker.com) stats.
 
@@ -10,6 +12,9 @@ BATTLEGROUND](https://www.playbattlegrounds.com).
 The exporter exposes the raw stats from the pubgtracker API, therefor the
 metrics are untyped and do not follow the Prometheus best practices.
 
+## Dashboard
+You can find a ready to use dashboard in [grafana/](grafana/) or get it from
+Grafana Labs: https://grafana.com/dashboards/3287
 
 ## Examples
 The examples use this scrape config for nicer labels and configuration:

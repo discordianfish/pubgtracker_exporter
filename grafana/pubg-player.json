@@ -636,7 +636,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "(pubgtracker_stats_best_rank{instance=\"$Player\", season=\"$Season\",region=\"$Region\"}) * -1",
+              "expr": "(pubgtracker_stats_best_rank{instance=\"$Player\", season=\"$Season\",region=\"$Region\"}) * -1 > -100000",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -1044,7 +1044,7 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
-          "id": 8,
+          "id": 17,
           "legend": {
             "avg": false,
             "current": false,
@@ -1127,7 +1127,7 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
-          "id": 11,
+          "id": 16,
           "legend": {
             "avg": false,
             "current": false,
@@ -1210,7 +1210,7 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
-          "id": 12,
+          "id": 15,
           "legend": {
             "avg": false,
             "current": false,
@@ -1293,7 +1293,7 @@
           "dashes": false,
           "datasource": "${DS_PROMETHEUS}",
           "fill": 1,
-          "id": 13,
+          "id": 14,
           "legend": {
             "avg": false,
             "current": false,

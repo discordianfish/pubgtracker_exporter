@@ -1,4 +1,5 @@
 # Pubgtracker Exporter
+**DEPRECATED - DOESN'T WORK ANYMORE DUE TO API CHANGES AND NO PLANS TO UPDATE**
 [![Dashboard](grafana/pubg-player-850.png)](grafana/pubg-player.png)
 
 [Prometheus](https://prometheus.io) Exporter exposing
